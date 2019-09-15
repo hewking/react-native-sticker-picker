@@ -32,7 +32,8 @@ const App = () => {
     <Fragment>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.container}>
-        <View style={styles.container}>
+        <View style={{ flex: 1, flexDirection: 'column' }} >
+          <View style={{ flex: 1, backgroundColor: '#424A5F' }} />
           <StickerPickView
             style={styles.stickerPicker}
             height={240}
@@ -42,16 +43,15 @@ const App = () => {
             }} />
         </View>
       </SafeAreaView>
-    </Fragment>
+    </Fragment >
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: Colors.lighter,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flex: 1
+    flex: 1,
+    flexDirection: 'column'
   },
   stickerPicker: {
     flexDirection: 'row',

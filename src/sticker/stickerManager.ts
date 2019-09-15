@@ -1,4 +1,4 @@
-import Stickers from '../../asset/stickers';
+import Stickers from '../../asset/stickers/stickers';
 import StickerCategory, { StickerItem } from './stickerCategory';
 
 export const PAGE_COLUMNS = 5;

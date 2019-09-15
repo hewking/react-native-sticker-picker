@@ -24,12 +24,22 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import StickerPickView from './src/sticker/stickerPickView'
+import { StickerItem } from './src/sticker/stickerCategory';
+
 const App = () => {
   return (
     <Fragment>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.container}>
         <View style={styles.container}>
+          <StickerPickView
+            style={styles.stickerPicker}
+            height={240}
+            itemSize={85}
+            onPickSticker={(category: StickerItem) => {
+              console.log('category', category);
+            }} />
         </View>
       </SafeAreaView>
     </Fragment>
@@ -43,6 +53,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 1
   },
+  stickerPicker: {
+    flexDirection: 'row',
+  }
 
 });
 
